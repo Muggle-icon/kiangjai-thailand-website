@@ -2,10 +2,10 @@
 
 - `assets/brand/app-icon.png`：用户提供的 240×240 透明 PNG。
 - `assets/brand/logo-horizontal.png`：用户提供的 632×240 透明 PNG，保持原图比例和像素内容。
-- `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。首页图用CSS显示顶部预览，所有图可点击打开完整原图。截图是产品界面展示，不据此增改官网原型条款。
+- `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。首页图与其他界面均按自然比例完整显示，所有图可点击打开完整原图；手机首页图不额外套框缩小。截图是产品界面展示，不据此增改官网原型条款。
 - `assets/images/market-life.jpg`：依据用户提供人物图，使用内置 imagegen 编辑后生成的横幅摄影素材；PNG 源保存在本次工作目录，网页版本转 JPEG 压缩。非客户证言或真实借款案例。
 - `assets/fonts/NotoSansThai-Variable.ttf`：Google Fonts 官方仓库 `google/fonts/ofl/notosansthai`，授权见同目录 `OFL-NotoSansThai.txt`。
-- `assets/icons/*.svg`：统一 Lucide 线性图标，经 better-icons 所列 Iconify API 获取，授权见 `LICENSE-Lucide.txt`。
+- `assets/icons/application-duotone.svg`、`bank-transfer-duotone.svg`、`qr-payment-duotone.svg`：Phosphor Duotone 的手机、银行、二维码图标，用于三项优势。通过 better-icons 获取，MIT许可见 `LICENSE-Phosphor.txt`；其他导航/系统控件继续使用 Lucide 线性图标，ISC许可见 `LICENSE-Lucide.txt`。
 
 ## 人物图最终提示词
 
