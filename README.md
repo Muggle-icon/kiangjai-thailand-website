@@ -1,31 +1,45 @@
-# เคียงใจ / Kiangjai 泰国官网设计预览
+# เคียงใจ / Kiangjai 泰国官网
 
-独立新项目。首版根据用户提供的已审校泰文 HTML 整理，产品正文未回退旧译；审稿占位、模拟下载和示例域名已替换。原型原文件和内部编辑工具未上传。
+- [公开预览](https://muggle-icon.github.io/kiangjai-thailand-website/)
+- [GitHub仓库](https://github.com/Muggle-icon/kiangjai-thailand-website)
 
-- 公开预览：https://muggle-icon.github.io/kiangjai-thailand-website/
-- 仓库：https://github.com/Muggle-icon/kiangjai-thailand-website
-- 页面：首页 `index.html`、安全中心 `security.html`、隐私 `privacy.html`、条款 `terms.html`。
-- 样式：`assets/styles.css`；交互：`assets/app.js`。
-- [需要补充的素材与信息](docs/materials.md)
-- [设计背景](design/context.md)、[原型源码审查](design/audit.md)、[竞品研究](docs/competitor-research.md)
+保留用户已审校原型的完整业务内容，重构官网视觉与响应式交互。品牌色 #44E0F8，采用真实Logo、Noto Sans Thai、生活场景与连贯的产品信息/下载区域。
 
-## 当前版本
+## 编辑
 
-这是可公开查看的设计预览，不是正式营业站。品牌色已按用户确认为 `#44E0F8`，搭配深青按钮、浅灰底和白色卡片；Logo 使用品牌文字占位，产品截图位置已编号。原型中的最高 50,000 泰铢、曼谷服务区域和企业资料均保留为原型输入，尚未独立核验。
+现有静态HTML/CSS/JS，无框架或运行时依赖。
 
-尚缺真实商店链接、正式域名、开发者、利率费用、期限、申请资格、牌照核验和法律正文。页面明确显示待确认状态，没有贷款申请表、数据收集、外部统计脚本、伪造 QR 或模拟申请成功。下载点击显示“即将上线”。不显示原型中未经本次核验的已许可断言。
+| 文件 | 作用 |
+| --- | --- |
+| src/pages/home.html | 首页 |
+| src/pages/security.html | 完整安全中心 |
+| src/pages/privacy.html / terms.html | 原型原有政策说明 |
+| src/components/ | 页头、页尾、FAQ、弹窗 |
+| src/content/reviewed-th.json | 原型181条已保存泰语文案，禁止擅改 |
+| assets/redesign.css | 全站视觉和响应式 |
+| assets/base.css | 基础及支持页样式 |
+| assets/app.js | 菜单、FAQ、弹窗、下载演示、举报、复制 |
+| scripts/build.py | 用Python标准库组装四个静态页面 |
 
-## 后续更新
+```sh
+python3 scripts/build.py
+node --check assets/app.js
+python3 -m http.server 8765
+```
 
-固定更新这个仓库的 `main` 分支。GitHub Pages 以 `main` 根目录为源；每次正常提交推送后自动更新同一预览地址，保留 Git 历史，无需创建新仓库或强制推送。
+编辑后检查1440、390、360视口，正常提交推送main，Pages自动更新同一链接。无需新仓库或强制推送。
 
-1. 替换 `assets/` 中的正式素材，并更新页面中的图片引用。
-2. 修改页面、样式或交互，保留已审校泰文，必要时另标新文案待审校。
-3. 检查桌面与手机布局、页面直链、FAQ、菜单、弹窗和控制台。
-4. 提交并正常推送 `main`，等待 Pages 构建成功后交付同一链接。
+## 内容基线
 
-本地预览：在本目录运行 `python3 -m http.server 8765`，访问 `http://127.0.0.1:8765/`。这是无依赖的静态网站，无需安装构建工具。
+原型 `211026 version kiangjai-thai-reviewed-20261021T134712.html` 的已保存state.edits优先于catalog。保留所有原业务信息，不用“待确认”替代原文。截图、竞品和审查意见都不能自行改变原型条款。
 
-## 证据边界
+原型默认双平台下载与完整官方渠道示例已恢复。原型本身未设置真实商店链接、示例QR不可扫描，点击按原型反馈；示例域名/开发者/举报邮箱与隐私/条款编制中原句继续照录。这是原型已有状态，不是要求重新填正文。
 
-原型审查基于源码；新预览另做浏览器验证。竞品 ATS PICO 首屏已视觉查看，FINNIX、MoneyThunder 和 Rabbit Cash 为官网文本核查；竞品自述不代表用户产品的条款或合规要求。正式产品信息须由业务负责人确认。`noindex` 用于降低预览被搜索收录的机会，不构成访问控制。
+## 设计与验证
+
+- [设计方向](design/redesign-direction.md)
+- [最终验证](docs/redesign-verification.md)
+- [内容恢复核对](docs/content-restoration.md)
+- [素材来源与完整图片处理提示词](docs/assets.md)
+
+人物图片经imagegen依据用户素材去字、扩景、调整姿态，仅为品牌场景，不是客户评价。泰文与页面结构均为真实HTML/CSS。Noto Sans Thai依SIL OFL、Lucide依ISC授权，各目录附license。公开设计页面使用noindex；该设置不是访问控制。

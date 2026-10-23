@@ -16,7 +16,10 @@
     document.body.style.overflow = 'hidden';
   };
   $$('[data-download]').forEach(button => button.addEventListener('click', () => openDialog($('#download-dialog'), button)));
-  $$('[data-contact]').forEach(button => button.addEventListener('click', () => openDialog($('#contact-dialog'), button)));
+  $$('[data-contact]').forEach(button => button.addEventListener('click', () => {
+    $('#kj-copy-feedback').textContent = '';
+    openDialog($('#contact-dialog'), button);
+  }));
   $$('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
   $$('dialog').forEach(dialog => {
     dialog.addEventListener('close', () => {
@@ -40,32 +43,72 @@
     button.lastElementChild.textContent = expand ? '−' : '＋';
     document.getElementById(button.getAttribute('aria-controls')).hidden = !expand;
   }));
+  // Preserve the reviewed prototype's copy and download simulation behavior.
+  const reviewedCopy = {
+  "copySuccess": "คัดลอกหมายเลขโทรศัพท์บริษัทแล้ว",
+  "copyFailure": "คัดลอกไม่สำเร็จ โปรดเลือกและคัดลอกด้วยตนเอง: 0812341407",
+  "sampleCopy": "โหมดตรวจทาน: เว็บไซต์จริงจะคัดลอกข้อมูลที่ตั้งค่าไว้ แต่แบบจำลองนี้จะไม่คัดลอกข้อมูลตัวอย่าง",
+  "android": "จำลอง: จะเปิด Google Play ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด แบบจำลองนี้จึงไม่เปิดลิงก์จริง",
+  "ios": "จำลอง: จะเปิด App Store ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด แบบจำลองนี้จึงไม่เปิดลิงก์จริง",
+  "impersonation": "แจ้งแอป / เว็บไซต์ปลอม",
+  "fraud": "แจ้งเบาะแสมิจฉาชีพ"
+};
+  let copyTimer;
   $$('[data-copy-phone]').forEach(button => button.addEventListener('click', async () => {
+    const isContact = button.dataset.copyPhone === 'contact';
+    const feedback = $('#kj-copy-feedback');
     try {
+      if (!navigator.clipboard?.writeText) throw new Error('clipboard unavailable');
       await navigator.clipboard.writeText('0812341407');
-      notify('คัดลอกหมายเลขโทรศัพท์แล้ว');
+      if (isContact) {
+        feedback.textContent = reviewedCopy.copySuccess;
+        clearTimeout(copyTimer);
+        copyTimer = setTimeout(() => { feedback.textContent = ''; }, 2000);
+      } else notify(reviewedCopy.copySuccess);
     } catch {
-      notify('โปรดเลือกและคัดลอกหมายเลขด้วยตนเอง: 0812341407');
+      if (isContact) feedback.textContent = reviewedCopy.copyFailure;
+      else notify(reviewedCopy.copyFailure);
     }
   }));
-  $$('[data-report], [data-copy-security]').forEach(button => button.addEventListener('click', () => notify('ช่องทางทางการอยู่ระหว่างยืนยัน เว็บไซต์ตัวอย่างยังไม่รับแจ้งข้อมูล')));
+  $$('[data-copy-security]').forEach(button => button.addEventListener('click', () => notify(reviewedCopy.sampleCopy)));
+  $$('[data-report]').forEach(button => button.addEventListener('click', () => {
+    $('#kj-report-topic').textContent = button.dataset.report === 'impersonation' ? reviewedCopy.impersonation : reviewedCopy.fraud;
+    const channel = $('#kj-report-channel');
+    channel.hidden = false;
+    channel.scrollIntoView({ block: 'start', behavior: 'auto' });
+  }));
+  $$('[data-store]').forEach(button => button.addEventListener('click', () => {
+    $('#kj-store-feedback').textContent = button.dataset.store === 'android' ? reviewedCopy.android : reviewedCopy.ios;
+  }));
   const menu = $('.menu-toggle');
+  const setMenu = expand => {
+    menu.setAttribute('aria-expanded', String(expand));
+    menu.setAttribute('aria-label', expand ? 'ปิดเมนู' : 'เปิดเมนู');
+    $('#main-nav').classList.toggle('is-open', expand);
+  };
   menu.addEventListener('click', () => {
     const expand = menu.getAttribute('aria-expanded') !== 'true';
-    menu.setAttribute('aria-expanded', String(expand));
-    $('#main-nav').classList.toggle('is-open', expand);
+    setMenu(expand);
   });
   $$('#main-nav a').forEach(link => link.addEventListener('click', () => {
-    menu.setAttribute('aria-expanded', 'false');
-    $('#main-nav').classList.remove('is-open');
+    setMenu(false);
   }));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
-      menu.setAttribute('aria-expanded', 'false');
-      $('#main-nav').classList.remove('is-open');
+      setMenu(false);
       menu.focus();
     }
   });
   const pageName = location.pathname.split('/').pop();
   if (pageName === 'security.html') $('#main-nav a[href="security.html"]').setAttribute('aria-current', 'page');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+    $$('.reveal').forEach(element => observer.observe(element));
+  }
 })();
