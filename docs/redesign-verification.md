@@ -1,14 +1,18 @@
 # 当前版本验证
 
-最新验收以 [design/qa.md](../design/qa.md) 为准。
+日期：2026-10-23。详细记录见 [design/qa.md](../design/qa.md)。本页记录本轮本地验收，不包含公开部署完成或公网验证结论。
 
-本轮视觉主参考为用户确认的ATS PICO；公开地址继续为 https://muggle-icon.github.io/kiangjai-thailand-website/ 。
+本轮按用户App视觉统一官网：撤除人物，使用三张原始App截图；品牌青、浅灰/白色表面、深青按钮和统一左对齐取代上一版暖白人物首屏。页头、主要标题与页尾共用轴线；桌面内容容器1200px，手机外边距24px，装饰方向箭头已移除。
 
-4页业务内容与原型保存文案一致，所有原有业务入口保留。通过1440/390/360首页真实浏览器检查、下载和联系弹窗、两组FAQ、安全详情与举报交互检查。菜单键盘顺序与手机人物/说明间距问题已修复。
+主 agent 在1440、390、360px真实浏览器检查页面；四页在360px无横向溢出，字体加载正常。菜单Tab/Escape、首页7FAQ、安全页6FAQ及7类诈骗详情、双平台下载原型反馈均已检查，控制台warning/error为空。Python构建、Node.js语法与Git diff空白检查通过。
 
-截图由本地实际页面生成，保存在工作区outputs：
-- kiangjai-ats-1440.png / kiangjai-ats-full-1440.png
-- kiangjai-ats-390.png / kiangjai-ats-full-390.png
-- kiangjai-ats-360.png
+独立审查确认：四页业务文字及原有入口无丢失，181条原型文案未改；三张App文件与用户PNG逐字节一致。1440与390px首屏和整页截图未见重叠、正文裁切或明显对齐问题。首屏两段使用平衡换行处理，保持原文。
 
-该设计预览仍呈现原型定义的下载演示、示例渠道和政策状态；没有增加新的正文占位要求。
+本轮截图位于工作区 `outputs/`（仓库同级）：
+
+- `kiangjai-app-1440.png` / `kiangjai-app-full-1440.png`
+- `kiangjai-app-390.png` / `kiangjai-app-full-390.png`
+- `kiangjai-app-360.png`
+- `kiangjai-app-security-360.png`
+
+原型定义的下载演示、示例官方渠道和政策状态继续保留。本轮未增加新的业务占位要求，也未声明外部无障碍认证。

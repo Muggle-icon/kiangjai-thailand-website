@@ -3,7 +3,7 @@
 - [公开预览](https://muggle-icon.github.io/kiangjai-thailand-website/)
 - [GitHub仓库](https://github.com/Muggle-icon/kiangjai-thailand-website)
 
-保留用户已审校原型的完整业务内容，重构官网视觉与响应式交互。品牌色 #44E0F8，以用户确认的ATS PICO为视觉主参考，采用真实Logo、Noto Sans Thai、整幅人物首屏、快捷导航和完整内容分区。
+保留用户已审校原型的完整业务内容，重构官网视觉与响应式交互。品牌色 #44E0F8，以用户确认的ATS PICO为视觉主参考，采用真实Logo、Noto Sans Thai、App原始截图、统一左对齐、深青按钮和完整内容分区。最新版本不使用单独抠出的人物。
 
 ## 编辑
 
@@ -37,9 +37,11 @@ python3 -m http.server 8765
 
 ## 设计与验证
 
+- [项目设计规则](design-system/kiangjai/MASTER.md)
+- [Skill选择与安装](docs/design-skill.md)
 - [设计方向](design/redesign-direction.md)
 - [最终验证](docs/redesign-verification.md)
 - [内容恢复核对](docs/content-restoration.md)
 - [素材来源与完整图片处理提示词](docs/assets.md)
 
-人物图片经imagegen依据用户素材去字、调整姿态并去背景，仅为品牌形象，不是客户评价。泰文与页面结构均为真实HTML/CSS。Noto Sans Thai依SIL OFL、Lucide依ISC授权，各目录附license。公开设计页面使用noindex；该设置不是访问控制。
+首页使用用户提供的App原始截图；旧人物素材仅保留为历史记录，页面不加载。泰文与页面结构均为真实HTML/CSS。Noto Sans Thai依SIL OFL、Lucide依ISC授权，各目录附license。公开设计页面使用noindex；该设置不是访问控制。
