@@ -1,42 +1,52 @@
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-layout shell">
+  <div class="shell hero-stage">
     <div class="hero-copy">
       <h1 id="hero-title"><small>สินเชื่อเคียงใจ</small> เคียงข้างคุณ<br>ทุกเรื่องเงิน</h1>
       <div class="hero-credit"><p>{{copy:d422892f10a3f7}}</p><p class="hero-amount">50,000 <span>{{copy:b86ab45a734dbc}}</span></p></div>
       <p class="hero-benefits">{{copy:10fb30d76af206}}</p>
-      <div class="hero-actions"><button class="button button-dark" type="button" data-download>{{copy:948ead93f8fb54}} {{icon:download}}</button><a class="text-link" href="#kj-steps">ขั้นตอนการสมัคร {{icon:arrow-right}}</a></div>
+      <button class="button button-primary" type="button" data-download>{{copy:948ead93f8fb54}}</button>
       <p class="hero-disclaimer">{{copy:a20ee21339ce9d}}</p>
     </div>
-    <div class="hero-visual"><img src="assets/images/market-life.jpg" alt="ภาพประกอบบรรยากาศร้านอาหารในตลาดไทย" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
+    <img class="hero-person" src="assets/images/merchant-cutout.png" alt="ผู้ประกอบการร้านอาหารถือโทรศัพท์" width="1024" height="1536" fetchpriority="high" decoding="async">
   </div>
+  <svg class="hero-wave" aria-hidden="true" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 65C420 145 800 5 1100 35C1240 45 1360 85 1440 75V120H0Z" fill="currentColor"/></svg>
 </section>
+<nav class="quick-nav" aria-label="เมนูลัด"><div class="shell"><a href="#kj-benefits">{{icon:wallet}}<span>จุดเด่นของบริการ</span></a><a href="#kj-steps">{{icon:file-text}}<span>ขั้นตอนการสมัคร</span></a><a href="#kj-faq">{{icon:circle-help}}<span>{{copy:237b6a528c21bb}}</span></a></div></nav>
 
-<section class="benefits section shell" id="kj-benefits" aria-labelledby="benefits-title">
+<section class="product-section section" id="kj-benefits" aria-labelledby="benefits-title"><div class="shell">
   <div class="section-heading"><h2 id="benefits-title">{{copy:23d289eadb5323}}</h2></div>
-  <div class="benefit-columns">
-    <article class="benefit-item reveal"><span class="feature-icon">{{icon:smartphone}}</span><h3>{{copy:1bebb0e80ef694}}</h3><p>{{copy:68746a71c6f62d}}</p></article>
-    <article class="benefit-item reveal"><span class="feature-icon">{{icon:wallet}}</span><h3>{{copy:56c2c7d7efd2d6}}</h3><p>{{copy:ceb74c7782bc31}}</p></article>
-    <article class="benefit-item reveal"><span class="feature-icon">{{icon:scan-line}}</span><h3>{{copy:f3d479ae42c826}}</h3><p>{{copy:edc2af888c79aa}}</p></article>
+  <div class="product-panel">
+    <div class="benefit-columns">
+      <article class="benefit-item"><span class="feature-icon">{{icon:smartphone}}</span><h3>{{copy:1bebb0e80ef694}}</h3><p>{{copy:68746a71c6f62d}}</p></article>
+      <article class="benefit-item"><span class="feature-icon">{{icon:wallet}}</span><h3>{{copy:56c2c7d7efd2d6}}</h3><p>{{copy:ceb74c7782bc31}}</p></article>
+      <article class="benefit-item"><span class="feature-icon">{{icon:scan-line}}</span><h3>{{copy:f3d479ae42c826}}</h3><p>{{copy:edc2af888c79aa}}</p></article>
+    </div>
+    <section class="application-steps" id="kj-steps" aria-labelledby="steps-title">
+      <h2 id="steps-title">{{copy:e18ce86d6b53d0}}</h2>
+      <ol class="step-list">
+        <li><span class="step-number">1</span><h3>{{copy:c377aad677c637}}</h3><p>{{copy:2bebb01ccc5399}}</p></li>
+        <li><span class="step-number">2</span><h3>{{copy:8c80238dd01302}}</h3><p>{{copy:a1024d6cb748b0}}</p></li>
+        <li><span class="step-number">3</span><h3>{{copy:1604e8fe2a8804}}</h3><p>{{copy:a44d9cc402035e}}</p></li>
+        <li><span class="step-number">4</span><h3>{{copy:b70e6f403fc8e6}}</h3><p>{{copy:7053a03e989d91}}</p></li>
+      </ol>
+    </section>
+    <aside class="safety-note"><div><strong>{{copy:fdbed5aa57f5b2}}</strong><p>{{copy:ef5b986bca41e6}}</p></div><a href="security.html#reminders">{{copy:31fc95a1f8e278}}</a></aside>
   </div>
-  <aside class="safety-strip"><span class="feature-icon">{{icon:shield-check}}</span><div><strong>{{copy:fdbed5aa57f5b2}}</strong><p>{{copy:ef5b986bca41e6}}</p></div><a class="text-link" href="security.html#reminders">{{copy:31fc95a1f8e278}} {{icon:arrow-right}}</a></aside>
-</section>
-
-<section class="steps section" id="kj-steps" aria-labelledby="steps-title"><div class="shell">
-  <div class="section-heading"><h2 id="steps-title">{{copy:e18ce86d6b53d0}}</h2></div>
-  <ol class="step-list">
-    <li class="reveal"><span class="step-number">01</span><h3>{{copy:c377aad677c637}}</h3><p>{{copy:2bebb01ccc5399}}</p></li>
-    <li class="reveal"><span class="step-number">02</span><h3>{{copy:8c80238dd01302}}</h3><p>{{copy:a1024d6cb748b0}}</p></li>
-    <li class="reveal"><span class="step-number">03</span><h3>{{copy:1604e8fe2a8804}}</h3><p>{{copy:a44d9cc402035e}}</p></li>
-    <li class="reveal"><span class="step-number">04</span><h3>{{copy:b70e6f403fc8e6}}</h3><p>{{copy:7053a03e989d91}}</p></li>
-  </ol>
 </div></section>
 
-<section class="about section shell" id="kj-about" aria-labelledby="about-title"><div class="about-brand"><img src="assets/brand/logo-horizontal.png" alt="เคียงใจ" width="632" height="240" loading="lazy"><h2 id="about-title">{{copy:8b25d873bdf598}}</h2></div><div class="about-content"><p class="about-description">{{copy:cdd17cff597160}}</p><div class="company-facts"><p>{{copy:8134a1a190ee25}}</p><p>{{copy:6519db8dcfe8aa}}</p></div></div></section>
+<section class="company-section section" id="kj-about" aria-labelledby="about-title"><div class="shell">
+  <div class="section-heading"><h2 id="about-title">{{copy:8b25d873bdf598}}</h2></div>
+  <div class="company-intro"><p>{{copy:cdd17cff597160}}</p><div class="company-facts"><p>{{copy:8134a1a190ee25}}</p><p>{{copy:6519db8dcfe8aa}}</p></div></div>
+  <div class="security-panel">
+    <div class="security-intro"><span class="security-icon">{{icon:shield-check}}</span><h2>{{copy:78ab057b7ed073}}</h2><p>{{copy:b53fa78527fad3}}</p><a class="button button-outline" href="security.html#reminders">{{copy:8e2830dd159825}}</a></div>
+    <div class="security-detail" id="kj-antifraud-banner"><h3>{{copy:0a2399e28f1f08}}</h3><p>{{copy:fd8d3b0dedb3f2}}</p><nav class="security-links" aria-label="ศูนย์ความปลอดภัย"><a href="security.html#channels">{{copy:ffc999bf5eb05d}}</a><a href="security.html">{{copy:08cd875ebf1b11}}</a></nav></div>
+  </div>
+</div></section>
 
-<section class="trust section" aria-labelledby="trust-title"><div class="shell trust-layout"><div class="trust-intro"><span class="trust-emblem">{{icon:shield-check}}</span><h2 id="trust-title">{{copy:78ab057b7ed073}}</h2><p>{{copy:b53fa78527fad3}}</p><a class="button button-cyan" href="security.html#reminders">{{copy:8e2830dd159825}} {{icon:arrow-right}}</a></div><div class="trust-detail" id="kj-antifraud-banner"><h3>{{copy:0a2399e28f1f08}}</h3><p>{{copy:fd8d3b0dedb3f2}}</p><div class="trust-actions"><a href="security.html#channels">{{copy:ffc999bf5eb05d}} {{icon:arrow-up-right}}</a><a href="security.html">{{copy:08cd875ebf1b11}} {{icon:arrow-right}}</a></div></div></div></section>
-
-<section class="faq section shell" id="kj-faq" aria-labelledby="faq-title"><div class="faq-intro"><h2 id="faq-title">{{copy:237b6a528c21bb}}</h2><div class="faq-help"><span class="feature-icon">{{icon:circle-help}}</span><button class="text-link" type="button" data-contact>{{copy:74b3c3cd84d798}} {{icon:arrow-up-right}}</button></div></div>{{component:faq}}</section>
-
-<section class="download shell" aria-labelledby="download-section-title"><div class="download-identity"><img src="assets/brand/app-icon.png" alt="ไอคอนแอปเคียงใจ" width="240" height="240" loading="lazy"><div><h2 id="download-section-title">{{copy:092d270e41f7a6}}</h2><p>{{copy:78dbf062f23349}}</p></div></div><div class="download-action"><button class="button button-dark" type="button" data-download>{{copy:948ead93f8fb54}} {{icon:download}}</button><p id="kj-home-download-safety">โปรดดาวน์โหลดผ่านลิงก์ทางการของ Google Play หรือ App Store ที่ประกาศบนเว็บไซต์นี้ อย่าติดตั้งแอปจากลิงก์ที่ไม่รู้จัก</p></div></section>
+<section class="help-section section" id="kj-faq" aria-labelledby="faq-title"><div class="shell">
+  <div class="section-heading"><h2 id="faq-title">{{copy:237b6a528c21bb}}</h2></div>
+  <div class="faq-panel">{{component:faq}}<div class="faq-contact"><button class="button button-outline" type="button" data-contact>{{copy:74b3c3cd84d798}}</button></div></div>
+  <section class="download" aria-labelledby="download-section-title"><div class="download-identity"><img src="assets/brand/app-icon.png" alt="ไอคอนแอปเคียงใจ" width="240" height="240" loading="lazy"><div><h2 id="download-section-title">{{copy:092d270e41f7a6}}</h2><p>{{copy:78dbf062f23349}}</p></div></div><button class="button button-dark" type="button" data-download>{{copy:948ead93f8fb54}}</button><p class="download-note" id="kj-home-download-safety">โปรดดาวน์โหลดผ่านลิงก์ทางการของ Google Play หรือ App Store ที่ประกาศบนเว็บไซต์นี้ อย่าติดตั้งแอปจากลิงก์ที่ไม่รู้จัก</p></section>
+</div></section>
 </main>
