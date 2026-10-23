@@ -19,3 +19,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Icon source inventory (retrieved through better-icons / Iconify):
+- application-duotone.svg: ph:device-mobile-duotone
+- bank-transfer-duotone.svg: ph:bank-duotone
+- qr-payment-duotone.svg: ph:qr-code-duotone
+- safety-duotone.svg: ph:shield-warning-duotone (retrieved 2026-10-23)

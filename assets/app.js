@@ -99,6 +99,31 @@
       menu.focus();
     }
   });
+  // Mobile gallery: native swiping and three accessible screen selectors.
+  const gallery = $('#app-gallery');
+  if (gallery) {
+    const screens = [...gallery.querySelectorAll('figure')];
+    const controls = $$('[data-app-view]');
+    const updateGallery = () => {
+      const start = gallery.getBoundingClientRect().left + parseFloat(getComputedStyle(gallery).paddingLeft);
+      const distances = screens.map(screen => Math.abs(screen.getBoundingClientRect().left - start));
+      const current = distances.indexOf(Math.min(...distances));
+      controls.forEach((control, index) => control.setAttribute('aria-pressed', String(index === current)));
+    };
+    controls.forEach(control => control.addEventListener('click', () => {
+      const screen = screens[Number(control.dataset.appView)];
+      const inset = parseFloat(getComputedStyle(gallery).paddingLeft);
+      const left = screen.getBoundingClientRect().left - gallery.getBoundingClientRect().left + gallery.scrollLeft - inset;
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+      gallery.scrollTo({ left, behavior });
+    }));
+    let frame;
+    gallery.addEventListener('scroll', () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(updateGallery);
+    }, { passive: true });
+    updateGallery();
+  }
   const pageName = location.pathname.split('/').pop();
   if (pageName === 'security.html') $('#main-nav a[href="security.html"]').setAttribute('aria-current', 'page');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

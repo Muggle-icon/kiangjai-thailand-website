@@ -2,10 +2,10 @@
 
 - `assets/brand/app-icon.png`：用户提供的 240×240 透明 PNG。
 - `assets/brand/logo-horizontal.png`：用户提供的 632×240 透明 PNG，保持原图比例和像素内容。
-- `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。首页图与其他界面均按自然比例完整显示，所有图可点击打开完整原图；手机首页图不额外套框缩小。截图是产品界面展示，不据此增改官网原型条款。
-- `assets/images/market-life.jpg`：依据用户提供人物图，使用内置 imagegen 编辑后生成的横幅摄影素材；PNG 源保存在本次工作目录，网页版本转 JPEG 压缩。非客户证言或真实借款案例。
+- `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。三张图都位于申请面板，按自然比例完整显示，所有图可点击打开完整原图；桌面三图并列，手机单屏横向画廊配三枚44px切换点，不裁掉纵向内容。截图是产品界面展示，不据此增改官网原型条款。
+- `assets/images/market-life.jpg`：依据用户提供人物图，使用内置 imagegen 编辑后生成的横幅摄影素材；PNG 源保存在本次工作目录，网页版本转 JPEG 压缩，1536×1024。当前用于通栏Hero，保留人物与夜市场景，通过响应式构图及浅白可读性遮罩承载原型文字；它不是透明人物抠图。非客户证言或真实借款案例。
 - `assets/fonts/NotoSansThai-Variable.ttf`：Google Fonts 官方仓库 `google/fonts/ofl/notosansthai`，授权见同目录 `OFL-NotoSansThai.txt`。
-- `assets/icons/application-duotone.svg`、`bank-transfer-duotone.svg`、`qr-payment-duotone.svg`：Phosphor Duotone 的手机、银行、二维码图标，用于三项优势。通过 better-icons 获取，MIT许可见 `LICENSE-Phosphor.txt`；其他导航/系统控件继续使用 Lucide 线性图标，ISC许可见 `LICENSE-Lucide.txt`。
+- `assets/icons/application-duotone.svg`、`bank-transfer-duotone.svg`、`qr-payment-duotone.svg`、`safety-duotone.svg`：Phosphor Duotone 的手机、银行、二维码及警示盾牌图标，对应三项优势与原安全提醒。通过 better-icons 获取，MIT许可见 `LICENSE-Phosphor.txt`；其他导航/系统控件继续使用 Lucide 线性图标，ISC许可见 `LICENSE-Lucide.txt`。
 
 ## 人物图最终提示词
 
@@ -16,10 +16,10 @@
 
 ## 历史透明人物素材（当前页面不加载）
 
-`assets/images/merchant-cutout.png`，1024×1536，带alpha，约2MB。使用内置imagegen在上一版用户人物素材编辑结果基础上去除背景，旧版曾用于首屏；用户最新要求撤除单独抠出的人物，因此当前所有页面均不加载此图和旧横幅。
+`assets/images/merchant-cutout.png`，1024×1536，带alpha，约2MB。使用内置imagegen在上一版用户人物素材编辑结果基础上去除背景，旧版曾用于首屏；用户最新要求撤除单独抠出的人物，因此当前所有页面均不加载此透明素材；完整夜市场景 `market-life.jpg` 已按最新ATS PICO参考方向重新用于Hero，两者不能混为一类。
 
 提示词：
 
 > Use case: background-extraction. Edit target: the supplied photograph of an adult Thai food stall owner. Produce a clean transparent-background photographic cutout of ONLY this same woman holding her phone. Preserve her identity, face, hair bun, smile, white shirt, turquoise patterned apron, phone and realistic anatomy. Keep her relaxed pose and include her complete head, hair, both shoulders, both arms, hands and body down to upper thighs; complete any part previously occluded by the counter naturally. Remove the entire market background, counter, utensils, vegetables and all other objects, leaving actual alpha transparency. Natural soft daylight color; no harsh orange rim light. Tall portrait composition fitted closely around the woman with small transparent margins, no extra empty landscape. No text, no UI, no logos, no added people or money. This asset will sit unframed on the right side of a warm ivory website hero.
 
-设置 `transparent_background: true`。另一轮去边缘尝试未用于网页；以上是实际采用素材的提示词。
+设置 `transparent_background: true`。另一轮去边缘尝试未用于网页；以上为历史版本实际采用透明素材的提示词，当前不加载该透明素材。

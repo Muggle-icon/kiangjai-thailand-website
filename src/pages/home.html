@@ -1,5 +1,6 @@
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-scene" aria-hidden="true"><img src="assets/images/market-life.jpg" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
   <div class="shell hero-stage">
     <div class="hero-copy">
       <h1 id="hero-title"><small>สินเชื่อเคียงใจ</small> เคียงข้างคุณ<br>ทุกเรื่องเงิน</h1>
@@ -8,9 +9,7 @@
       <button class="button button-primary" type="button" data-download>{{copy:948ead93f8fb54}}</button>
       <p class="hero-disclaimer">{{copy:a20ee21339ce9d}}</p>
     </div>
-    <div class="hero-product"><a class="app-frame app-frame-home" href="assets/app/home.png" target="_blank" rel="noopener" aria-label="ดูภาพหน้าจอแอปเคียงใจ"><img src="assets/app/home.png" alt="หน้าหลักของแอปเคียงใจ" width="750" height="1624" fetchpriority="high" decoding="async"></a></div>
   </div>
-
 </section>
 <nav class="quick-nav" aria-label="เมนูลัด"><div class="shell"><a href="#kj-benefits">{{icon:wallet}}<span>จุดเด่นของบริการ</span></a><a href="#kj-steps">{{icon:file-text}}<span>ขั้นตอนการสมัคร</span></a><a href="#kj-faq">{{icon:circle-help}}<span>{{copy:237b6a528c21bb}}</span></a></div></nav>
 
@@ -18,21 +17,26 @@
   <div class="section-heading"><h2 id="benefits-title">{{copy:23d289eadb5323}}</h2></div>
   <div class="product-panel">
     <div class="benefit-columns">
-      <article class="benefit-item"><span class="feature-icon">{{icon:application-duotone}}</span><h3>{{copy:1bebb0e80ef694}}</h3><p>{{copy:68746a71c6f62d}}</p></article>
-      <article class="benefit-item"><span class="feature-icon">{{icon:bank-transfer-duotone}}</span><h3>{{copy:56c2c7d7efd2d6}}</h3><p>{{copy:ceb74c7782bc31}}</p></article>
-      <article class="benefit-item"><span class="feature-icon">{{icon:qr-payment-duotone}}</span><h3>{{copy:f3d479ae42c826}}</h3><p>{{copy:edc2af888c79aa}}</p></article>
+      <article class="benefit-item"><span class="feature-icon">{{icon:application-duotone}}</span><div><h3>{{copy:1bebb0e80ef694}}</h3><p>{{copy:68746a71c6f62d}}</p></div></article>
+      <article class="benefit-item"><span class="feature-icon">{{icon:bank-transfer-duotone}}</span><div><h3>{{copy:56c2c7d7efd2d6}}</h3><p>{{copy:ceb74c7782bc31}}</p></div></article>
+      <article class="benefit-item"><span class="feature-icon">{{icon:qr-payment-duotone}}</span><div><h3>{{copy:f3d479ae42c826}}</h3><p>{{copy:edc2af888c79aa}}</p></div></article>
+      <aside class="benefit-item safety-note"><span class="feature-icon">{{icon:safety-duotone}}</span><div><h3>{{copy:fdbed5aa57f5b2}}</h3><p>{{copy:ef5b986bca41e6}}</p><a href="security.html#reminders">{{copy:31fc95a1f8e278}}</a></div></aside>
     </div>
-    <aside class="safety-note"><div><strong>{{copy:fdbed5aa57f5b2}}</strong><p>{{copy:ef5b986bca41e6}}</p></div><a href="security.html#reminders">{{copy:31fc95a1f8e278}}</a></aside>
   </div>
 </div></section>
     <section class="application-steps section" id="kj-steps" aria-labelledby="steps-title"><div class="shell">
       <h2 id="steps-title">{{copy:e18ce86d6b53d0}}</h2>
-      <div class="steps-layout"><ol class="step-list">
+      <div class="steps-panel"><ol class="step-list">
         <li><span class="step-number">1</span><h3>{{copy:c377aad677c637}}</h3><p>{{copy:2bebb01ccc5399}}</p></li>
         <li><span class="step-number">2</span><h3>{{copy:8c80238dd01302}}</h3><p>{{copy:a1024d6cb748b0}}</p></li>
         <li><span class="step-number">3</span><h3>{{copy:1604e8fe2a8804}}</h3><p>{{copy:a44d9cc402035e}}</p></li>
         <li><span class="step-number">4</span><h3>{{copy:b70e6f403fc8e6}}</h3><p>{{copy:7053a03e989d91}}</p></li>
-      </ol><div class="app-gallery" aria-label="ภาพหน้าจอแอปเคียงใจ">
+      </ol><div class="gallery-controls" aria-label="เลือกภาพหน้าจอแอป">
+        <button type="button" data-app-view="0" aria-controls="app-gallery" aria-pressed="true" aria-label="ดูหน้าจอหลัก"><span aria-hidden="true"></span></button>
+        <button type="button" data-app-view="1" aria-controls="app-gallery" aria-pressed="false" aria-label="ดูหน้าจอยืนยันการกู้"><span aria-hidden="true"></span></button>
+        <button type="button" data-app-view="2" aria-controls="app-gallery" aria-pressed="false" aria-label="ดูหน้าจอชำระคืน"><span aria-hidden="true"></span></button>
+      </div><div class="app-gallery" id="app-gallery" tabindex="0" aria-label="ภาพหน้าจอแอปเคียงใจ">
+        <figure><a class="app-frame app-frame-home" href="assets/app/home.png" target="_blank" rel="noopener" aria-label="ดูภาพหน้าจอแอปเคียงใจ"><img src="assets/app/home.png" alt="หน้าหลักของแอปเคียงใจ" width="750" height="1624" loading="lazy"></a></figure>
         <figure><a class="app-frame" href="assets/app/loan-plan.png" target="_blank" rel="noopener" aria-label="ดูภาพหน้าจอเลือกจำนวนงวด"><img src="assets/app/loan-plan.png" alt="หน้าจอเลือกจำนวนเงินและจำนวนงวด" width="750" height="1624" loading="lazy"></a><figcaption>{{copy:1604e8fe2a8804}}</figcaption></figure>
         <figure><a class="app-frame" href="assets/app/repayment.png" target="_blank" rel="noopener" aria-label="ดูภาพหน้าจอชำระคืน"><img src="assets/app/repayment.png" alt="หน้าจอสแกนจ่ายเพื่อชำระคืน" width="750" height="1624" loading="lazy"></a><figcaption>{{copy:f3d479ae42c826}}</figcaption></figure>
       </div></div>
