@@ -1,6 +1,6 @@
 # เคียงใจ / Kiangjai 泰国官网设计预览
 
-独立新项目。首版根据用户提供的已审校泰文 HTML 整理，保留其中 27 条泰文审校修改。原型原文件和内部编辑工具未上传。
+独立新项目。首版根据用户提供的已审校泰文 HTML 整理，产品正文未回退旧译；审稿占位、模拟下载和示例域名已替换。原型原文件和内部编辑工具未上传。
 
 - 公开预览：https://muggle-icon.github.io/kiangjai-thailand-website/
 - 仓库：https://github.com/Muggle-icon/kiangjai-thailand-website
