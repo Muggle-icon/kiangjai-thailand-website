@@ -1,6 +1,6 @@
 # 素材来源与处理
 
-- `assets/brand/logo-symbol.png`：用户本轮提供的136×128原始纯图形PNG，只替换四页导航左上Logo，不替换页尾横版Logo或App图标。
+- `assets/brand/logo-symbol.png`：用户本轮提供的136×136原始纯图形PNG，只替换四页导航左上Logo，不替换页尾横版Logo或App图标。
 - `assets/brand/app-icon.png`：用户提供的 240×240 透明 PNG。
 - `assets/brand/logo-horizontal.png`：用户提供的 632×240 透明 PNG，保持原图比例和像素内容；当前继续用于页尾。
 - `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。三张图都位于申请面板，按自然比例完整显示，所有图可点击打开完整原图；桌面三图并列，手机单屏横向画廊配三枚44px切换点，不裁掉纵向内容。截图是产品界面展示，不据此增改官网原型条款。
