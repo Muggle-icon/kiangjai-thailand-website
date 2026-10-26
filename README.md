@@ -3,7 +3,7 @@
 - [公开预览](https://muggle-icon.github.io/kiangjai-thailand-website/)
 - [GitHub仓库](https://github.com/Muggle-icon/kiangjai-thailand-website)
 
-保留用户已审校原型的完整业务内容，按指定的 [ATS PICO](https://www.atspico.co.th/home) 对照比例与模块组织。Hero完整展示3:2夜市场景：桌面左25%信息/右75%照片，手机先信息后照片；不加渐变、蒙版、叠字或裁切。品牌青三入口、居中模块标题、大白优势与申请面板形成整组布局。保留 `#44E0F8`、深青按钮及自托管Noto Sans Thai；只替换导航左上的用户纯图形Logo，页尾Logo和App图标不变。
+保留已审原型完整内容，继续按 [ATS PICO](https://www.atspico.co.th/home) 组织模块；最新Header/Hero要求优先。桌面Hero为44%左对齐信息/56%完整3:2场景，标题和额度800字重，左边距对齐1120px正文。手机与761–900px先信息后完整照片，无渐变、蒙版、叠字或裁切。页头用用户完整带名称Logo，导航居中，以teal变色及选中加粗反馈，无下划线；页尾Logo和App图标不变。
 
 ## 编辑
 
@@ -47,8 +47,8 @@ python3 -m http.server 8765
 - [内容恢复核对](docs/content-restoration.md)
 - [素材来源与完整图片处理提示词](docs/assets.md)
 
-全站共用1120px主轴，手机24px外边距；页头80px/64px。桌面sticky配104px锚点偏移，手机relative配24px偏移。模块标题64px/40px，标题到面板64px/40px；优势上留白160px/80px，面板正文左对齐。四项优势包含原安全提醒，分别用手机、银行、二维码、警示盾牌图标。申请面板桌面展示四步和三张完整原图，手机为纵向步骤与单屏横向画廊，可滑动或使用三枚44px切换点。
+全站共用1120px主轴，手机24px外边距；桌面页头88px，以等宽176px两侧槽将中部导航居中，sticky配112px锚点偏移；手机64px relative配24px偏移。首页scrollspy使用aria-current=location，安全页为page。其余模块标题64px/40px、标题间距64px/40px、优势上留白160px/80px不变。四项优势及四步/完整三图申请面板保留，手机画廊可滑动或用三枚44px控件。
 
-H08官方渠道与防骗卡片已放在下载后、页脚前，原文与入口不变。
+H08仍在下载后、页脚前。当前代码与内容审计完成不等于本轮视觉及交互QA已通过，应以本轮验证记录和最新截图为准。
 
 `market-life.jpg` 是依据用户人物图编辑的1536×1024完整场景，当前自然比例用于Hero；历史透明人物仅存档。泰文与结构均为真实HTML/CSS。Noto Sans Thai依SIL OFL、Phosphor依MIT、Lucide依ISC授权，各目录附license。公开设计页面使用noindex；该设置不是访问控制。

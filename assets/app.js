@@ -124,6 +124,37 @@
     }, { passive: true });
     updateGallery();
   }
+  // Keep the in-page navigation aligned with the section being read.
+  const sectionLinks = $$('#main-nav a[href*="#"]').map(link => ({
+    link,
+    section: document.getElementById(new URL(link.href).hash.slice(1))
+  })).filter(item => item.section);
+  if (sectionLinks.length) {
+    let navFrame = 0;
+    const updateActiveSection = () => {
+      navFrame = 0;
+      const header = $('.site-header');
+      const fixed = getComputedStyle(header).position === 'sticky';
+      const readingLine = (fixed ? header.getBoundingClientRect().bottom : 0) + 112;
+      let active = null;
+      sectionLinks.forEach(item => {
+        if (item.section.getBoundingClientRect().top <= readingLine) active = item.link;
+      });
+      sectionLinks.forEach(({ link }) => {
+        if (link === active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const scheduleActiveSection = () => {
+      if (!navFrame) navFrame = requestAnimationFrame(updateActiveSection);
+    };
+    window.addEventListener('scroll', scheduleActiveSection, { passive: true });
+    window.addEventListener('resize', scheduleActiveSection);
+    window.addEventListener('hashchange', scheduleActiveSection);
+    window.addEventListener('load', scheduleActiveSection);
+    document.fonts?.ready.then(scheduleActiveSection);
+    updateActiveSection();
+  }
   const pageName = location.pathname.split('/').pop();
   if (pageName === 'security.html') $('#main-nav a[href="security.html"]').setAttribute('aria-current', 'page');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
