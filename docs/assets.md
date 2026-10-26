@@ -1,9 +1,10 @@
 # 素材来源与处理
 
+- `assets/brand/logo-symbol.png`：用户本轮提供的136×128原始纯图形PNG，只替换四页导航左上Logo，不替换页尾横版Logo或App图标。
 - `assets/brand/app-icon.png`：用户提供的 240×240 透明 PNG。
-- `assets/brand/logo-horizontal.png`：用户提供的 632×240 透明 PNG，保持原图比例和像素内容。
+- `assets/brand/logo-horizontal.png`：用户提供的 632×240 透明 PNG，保持原图比例和像素内容；当前继续用于页尾。
 - `assets/app/home.png`、`assets/app/loan-plan.png`、`assets/app/repayment.png`：用户提供的750×1624原始PNG，逐字节复制，分别对应首页、选期、扫码还款；未改写图中文字和金额。三张图都位于申请面板，按自然比例完整显示，所有图可点击打开完整原图；桌面三图并列，手机单屏横向画廊配三枚44px切换点，不裁掉纵向内容。截图是产品界面展示，不据此增改官网原型条款。
-- `assets/images/market-life.jpg`：依据用户提供人物图，使用内置 imagegen 编辑后生成的横幅摄影素材；PNG 源保存在本次工作目录，网页版本转 JPEG 压缩，1536×1024。当前用于通栏Hero，保留人物与夜市场景，通过响应式构图及浅白可读性遮罩承载原型文字；它不是透明人物抠图。非客户证言或真实借款案例。
+- `assets/images/market-life.jpg`：依据用户提供人物图，使用内置imagegen编辑的完整摄影素材；PNG源保存在工作目录，网页转JPEG压缩，1536×1024。当前完整3:2自然比例用于Hero：桌面信息25%/照片75%，手机先信息后照片。不裁切、不加蒙版或渐变、不叠字，人物和环境全部直接显示；不是透明人物抠图，也不是客户证言或真实借款案例。
 - `assets/fonts/NotoSansThai-Variable.ttf`：Google Fonts 官方仓库 `google/fonts/ofl/notosansthai`，授权见同目录 `OFL-NotoSansThai.txt`。
 - `assets/icons/application-duotone.svg`、`bank-transfer-duotone.svg`、`qr-payment-duotone.svg`、`safety-duotone.svg`：Phosphor Duotone 的手机、银行、二维码及警示盾牌图标，对应三项优势与原安全提醒。通过 better-icons 获取，MIT许可见 `LICENSE-Phosphor.txt`；其他导航/系统控件继续使用 Lucide 线性图标，ISC许可见 `LICENSE-Lucide.txt`。
 
