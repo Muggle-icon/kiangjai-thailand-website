@@ -1,0 +1,661 @@
+/* Homepage modules. Shared header, Hero, dialogs and tokens remain in redesign.css. */
+.home-page {
+  --section-space:80px;
+  --module-title:48px;
+  --module-gap:40px;
+}
+.home-page h2 {
+  font-size:var(--module-title);
+  font-weight:750;
+  line-height:1.4;
+}
+.home-page .section-heading {
+  margin-bottom:var(--module-gap);
+}
+.home-page .section-heading h2 {
+  margin:0;
+}
+.home-page .product-section {
+  background:var(--paper);
+  padding-block:80px;
+}
+.home-page .product-panel {
+  padding:0;
+  border-radius:0;
+  background:none;
+}
+.home-page .benefit-columns {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:32px;
+}
+.home-page .benefit-item {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:20px;
+  padding:0 24px 0 0;
+  border-right:1px solid var(--line);
+}
+.home-page .benefit-columns>.benefit-item:last-child {
+  border:0;
+  padding-right:0;
+}
+.home-page .feature-icon,.home-page .feature-icon .icon {
+  width:72px;
+  height:72px;
+}
+.home-page .benefit-item h3 {
+  margin:0 0 12px;
+  font-size:26px;
+  line-height:1.45;
+  font-weight:700;
+}
+.home-page .benefit-item p {
+  font-size:16px;
+  line-height:1.85;
+  color:var(--muted);
+}
+.home-page .safety-note {
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:24px;
+  align-items:center;
+  padding:24px 32px;
+  margin-top:40px;
+  border:0;
+  border-radius:24px;
+  background:var(--cyan-soft);
+}
+.home-page .safety-note .feature-icon,.home-page .safety-note .icon {
+  width:48px;
+  height:48px;
+}
+.home-page .safety-note>div {
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:32px;
+  align-items:center;
+}
+.home-page .safety-note h3 {
+  grid-column:1;
+  font-size:20px;
+  margin:0 0 4px;
+}
+.home-page .safety-note p {
+  grid-column:1;
+  font-size:14px;
+}
+.home-page .safety-note a {
+  grid-column:2;
+  grid-row:1/3;
+  margin:0;
+  white-space:nowrap;
+  text-underline-offset:4px;
+}
+.home-page .application-steps {
+  background:var(--surface);
+  padding-block:80px;
+}
+.home-page .application-steps h2 {
+  margin-bottom:40px;
+}
+.home-page .steps-panel {
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  gap:56px;
+  align-items:center;
+  padding:0;
+  border-radius:0;
+  background:none;
+}
+.home-page .step-list {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.home-page .step-list li {
+  display:grid;
+  grid-template-columns:48px 1fr;
+  column-gap:20px;
+  text-align:left;
+  padding-bottom:28px;
+}
+.home-page .step-list li:last-child {
+  padding:0;
+}
+.home-page .step-number {
+  grid-row:1/3;
+  margin:0;
+  width:48px;
+  height:48px;
+  font-size:20px;
+  font-weight:700;
+  background:var(--brand);
+}
+.home-page .step-list li:before {
+  display:block;
+  left:23px;
+  right:auto;
+  top:56px;
+  bottom:8px;
+  width:1px;
+  border:0;
+  background:#b8d4da;
+}
+.home-page .step-list li:last-child:before {
+  display:none;
+}
+.home-page .step-list h3 {
+  grid-column:2;
+  font-size:22px;
+  line-height:1.5;
+  font-weight:700;
+  margin:0 0 6px;
+}
+.home-page .step-list p {
+  grid-column:2;
+  font-size:15px;
+  line-height:1.8;
+}
+.home-page .app-gallery {
+  display:grid;
+  grid-template-columns:1.08fr 1fr 1fr;
+  align-items:start;
+  gap:16px;
+  margin:0;
+  padding:0;
+  border:0;
+  overflow:visible;
+}
+.home-page .app-gallery figure {
+  margin:0;
+  padding:0;
+}
+.home-page .app-gallery figure:not(:first-child) {
+  margin-top:32px;
+}
+.home-page .app-frame {
+  border:1px solid #dce8eb;
+  border-radius:20px;
+  box-shadow:0 12px 28px #113f4a0c;
+  background:white;
+}
+.home-page .app-frame:hover {
+  box-shadow:0 12px 28px #113f4a20;
+}
+.home-page .app-gallery figcaption {
+  margin-top:16px;
+  font-size:14px;
+  line-height:1.7;
+  font-weight:600;
+}
+.home-page .company-section {
+  background:var(--paper);
+  padding-block:80px;
+}
+.home-page .company-section>.shell {
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  gap:40px 56px;
+}
+.home-page .company-section .section-heading {
+  margin:0;
+  text-align:left;
+}
+.home-page .company-intro {
+  margin:0;
+  max-width:none;
+  font-size:17px;
+  line-height:1.9;
+  text-align:left;
+}
+.home-page .company-facts {
+  display:block;
+  margin-top:24px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  text-align:left;
+  font-size:14px;
+}
+.home-page .company-facts p+p {
+  margin-top:4px;
+}
+.home-page .security-panel {
+  grid-column:1/-1;
+  margin:0;
+  padding:32px 40px;
+  border-radius:24px;
+  background:var(--surface);
+}
+.home-page .security-intro {
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:48px;
+  align-items:center;
+}
+.home-page .security-intro h2 {
+  grid-column:1;
+  margin:0 0 12px;
+  font-size:28px;
+  font-weight:700;
+}
+.home-page .security-intro p {
+  grid-column:1;
+  margin:0;
+}
+.home-page .security-intro>.button {
+  grid-column:2;
+  grid-row:1/3;
+  margin:0;
+  font-size:14px;
+}
+.home-page .help-section {
+  background:var(--paper);
+  padding-block:0 80px;
+}
+.home-page .help-layout {
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  gap:56px;
+  align-items:start;
+  padding-top:64px;
+  border-top:1px solid var(--line);
+}
+.home-page .help-layout .section-heading {
+  text-align:left;
+  margin:0;
+  padding:32px;
+  border-radius:24px;
+  background:var(--cyan-soft);
+}
+.home-page .help-layout h2 {
+  font-size:40px;
+  line-height:1.45;
+}
+.home-page .faq-panel {
+  padding:0;
+  border-radius:0;
+  background:none;
+}
+.home-page .kj-faq-list>article {
+  border-bottom:1px solid var(--line);
+}
+.home-page .kj-faq-list>article:first-child {
+  border-top:1px solid var(--line);
+}
+.home-page .kj-question {
+  min-height:76px;
+  padding:22px 0;
+  font-size:17px;
+  line-height:1.8;
+  font-weight:600;
+  text-align:left;
+}
+.home-page .kj-question>span:last-child {
+  font-size:26px;
+}
+.home-page .kj-answer {
+  padding:0 40px 24px 0;
+  font-size:16px;
+  line-height:1.9;
+}
+.home-page .faq-contact {
+  text-align:left;
+  margin-top:24px;
+}
+.home-page .download-section {
+  padding-block:48px;
+  background:var(--brand);
+}
+.home-page .download {
+  margin:0;
+  padding:0;
+  gap:24px 48px;
+  border-radius:0;
+  background:none;
+}
+.home-page .download-identity {
+  gap:24px;
+}
+.home-page .download-identity>img {
+  width:96px;
+  height:96px;
+  border-radius:24px;
+}
+.home-page .download h2 {
+  margin:0 0 8px;
+  font-size:32px;
+  line-height:1.45;
+  font-weight:750;
+}
+.home-page .download-note {
+  max-width:none;
+  padding-top:20px;
+  border-top:1px solid #113f4a30;
+  font-size:13px;
+}
+.home-page .official-section {
+  padding-block:40px;
+  background:var(--paper);
+}
+.home-page .official-panel {
+  padding:0;
+  border:0;
+  border-radius:0;
+  gap:8px 48px;
+  background:none;
+}
+.home-page .official-panel h3 {
+  font-size:24px;
+  font-weight:700;
+  margin:0;
+}
+.home-page .official-panel>p {
+  max-width:760px;
+  font-size:14px;
+  line-height:1.9;
+}
+.home-page .official-panel .security-links {
+  gap:0;
+}
+.home-page .security-links a {
+  text-underline-offset:4px;
+}
+@media(max-width:1040px) {
+  .home-page .steps-panel {
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:32px;
+  }
+  .home-page .benefit-columns {
+    gap:24px;
+  }
+  .home-page .benefit-item h3 {
+    font-size:23px;
+  }
+  .home-page .company-section>.shell,.home-page .help-layout {
+    grid-template-columns:260px minmax(0,1fr);
+    gap:40px;
+  }
+  .home-page .security-intro {
+    column-gap:24px;
+  }
+  .home-page .download {
+    grid-template-columns:1fr auto;
+  }
+  .home-page .download>.button {
+    grid-column:2;
+  }
+  .home-page .download-note {
+    grid-column:1/-1;
+  }
+}
+@media(max-width:900px) {
+  .home-page .steps-panel {
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .home-page .step-list {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+  .home-page .step-list li {
+    padding:0;
+  }
+  .home-page .step-list li:before {
+    display:none;
+  }
+  .home-page .app-gallery {
+    width:min(660px,100%);
+    margin-inline:auto;
+    gap:24px;
+  }
+  .home-page .security-intro {
+    grid-template-columns:1fr;
+  }
+  .home-page .security-intro>.button {
+    grid-column:1;
+    grid-row:auto;
+    justify-self:start;
+    margin-top:24px;
+  }
+  .home-page .download {
+    grid-template-columns:1fr;
+  }
+  .home-page .download>.button {
+    grid-column:1;
+    justify-self:start;
+  }
+}
+@media(max-width:760px) {
+  .home-page {
+    --section-space:56px;
+    --module-title:32px;
+    --module-gap:32px;
+  }
+  .home-page .product-section,.home-page .application-steps,.home-page .company-section {
+    padding-block:56px;
+  }
+  .home-page .section-heading,.home-page .application-steps h2 {
+    text-align:left;
+    margin-bottom:32px;
+  }
+  .home-page .benefit-columns {
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .home-page .benefit-item {
+    display:grid;
+    grid-template-columns:56px minmax(0,1fr);
+    gap:20px;
+    padding:0;
+    border:0;
+  }
+  .home-page .feature-icon,.home-page .feature-icon .icon {
+    width:56px;
+    height:56px;
+  }
+  .home-page .benefit-item h3 {
+    font-size:22px;
+    margin-bottom:8px;
+  }
+  .home-page .benefit-item p {
+    font-size:15px;
+    line-height:1.8;
+  }
+  .home-page .safety-note {
+    display:block;
+    margin-top:32px;
+    padding:24px;
+  }
+  .home-page .safety-note>.feature-icon {
+    display:none;
+  }
+  .home-page .safety-note>div {
+    display:block;
+  }
+  .home-page .safety-note h3 {
+    font-size:20px;
+  }
+  .home-page .safety-note p {
+    font-size:14px;
+  }
+  .home-page .safety-note a {
+    margin-top:8px;
+  }
+  .home-page .steps-panel {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
+  .home-page .step-list {
+    display:flex;
+    gap:0;
+    order:0;
+  }
+  .home-page .step-list li {
+    grid-template-columns:40px minmax(0,1fr);
+    gap:0 16px;
+    padding-bottom:28px;
+  }
+  .home-page .step-number {
+    width:40px;
+    height:40px;
+    font-size:18px;
+  }
+  .home-page .step-list li:before {
+    display:block;
+    left:19px;
+    top:48px;
+    bottom:8px;
+  }
+  .home-page .step-list h3 {
+    font-size:21px;
+  }
+  .home-page .step-list p {
+    font-size:14px;
+  }
+  .home-page .app-gallery {
+    display:flex;
+    align-items:flex-start;
+    order:1;
+    width:auto;
+    margin:32px -24px 0;
+    padding:0 24px 16px;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:24px;
+    overscroll-behavior-x:contain;
+  }
+  .home-page .app-gallery figure,.home-page .app-gallery figure:not(:first-child) {
+    flex:0 0 calc(100% - 24px);
+    min-width:0;
+    margin:0;
+    scroll-snap-align:start;
+  }
+  .home-page .app-frame {
+    width:100%;
+    max-width:290px;
+    margin-inline:auto;
+    border-radius:24px;
+  }
+  .home-page .gallery-controls {
+    order:2;
+    display:flex;
+    justify-content:center;
+    gap:4px;
+    margin:8px 0 0;
+  }
+  .home-page .gallery-controls button {
+    width:44px;
+    height:44px;
+  }
+  .home-page .company-section>.shell,.home-page .help-layout {
+    display:block;
+  }
+  .home-page .company-section .section-heading {
+    margin-bottom:24px;
+  }
+  .home-page .company-intro {
+    font-size:16px;
+    line-height:1.9;
+  }
+  .home-page .company-facts {
+    font-size:13px;
+    overflow-wrap:anywhere;
+  }
+  .home-page .security-panel {
+    margin-top:32px;
+    padding:24px;
+  }
+  .home-page .security-intro h2 {
+    font-size:24px;
+  }
+  .home-page .security-intro>p {
+    font-size:15px;
+  }
+  .home-page .security-intro>.button {
+    max-width:100%;
+    font-size:13px;
+    white-space:normal;
+    text-align:center;
+  }
+  .home-page .help-section {
+    padding-block:0 56px;
+  }
+  .home-page .help-layout {
+    padding-top:40px;
+  }
+  .home-page .help-layout .section-heading {
+    padding:0;
+    margin-bottom:24px;
+    background:none;
+    border-radius:0;
+  }
+  .home-page .help-layout h2 {
+    font-size:32px;
+  }
+  .home-page .faq-contact {
+    margin-top:16px;
+  }
+  .home-page .kj-question {
+    min-height:72px;
+    padding:20px 0;
+    gap:16px;
+    font-size:16px;
+  }
+  .home-page .kj-answer {
+    padding:0 0 24px;
+    font-size:15px;
+  }
+  .home-page .download-section {
+    padding-block:40px;
+  }
+  .home-page .download {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .home-page .download-identity {
+    display:block;
+  }
+  .home-page .download-identity>img {
+    width:64px;
+    height:64px;
+    border-radius:16px;
+    margin-bottom:20px;
+  }
+  .home-page .download h2 {
+    font-size:26px;
+    line-height:1.5;
+    text-wrap:pretty;
+  }
+  .home-page .download-identity p {
+    font-size:14px;
+  }
+  .home-page .download>.button {
+    width:100%;
+    min-width:0;
+  }
+  .home-page .download-note {
+    font-size:12px;
+    line-height:1.85;
+  }
+  .home-page .official-section {
+    padding-block:32px;
+  }
+  .home-page .official-panel {
+    display:block;
+  }
+  .home-page .official-panel h3 {
+    font-size:22px;
+    margin:0 0 12px;
+  }
+  .home-page .official-panel .security-links {
+    flex-direction:row;
+    gap:0 24px;
+    margin-top:16px;
+  }
+}

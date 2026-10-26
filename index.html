@@ -4,7 +4,7 @@
 <meta name="theme-color" content="#44E0F8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>หน้าแรก — เคียงใจ</title><link rel="icon" href="assets/brand/app-icon.png" type="image/png">
 <link rel="preload" href="assets/fonts/NotoSansThai-Variable.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/base.css?v=b432a248cd54"><link rel="stylesheet" href="assets/redesign.css?v=b432a248cd54"><script src="assets/app.js?v=b432a248cd54" defer></script></head>
+<link rel="stylesheet" href="assets/base.css?v=60435ca31ea6"><link rel="stylesheet" href="assets/redesign.css?v=60435ca31ea6"><link rel="stylesheet" href="assets/homepage.css?v=60435ca31ea6"><link rel="stylesheet" href="assets/secondary.css?v=60435ca31ea6"><script src="assets/app.js?v=60435ca31ea6" defer></script></head>
 <body><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a><div id="kiangjai-v1">
 <header class="site-header"><div class="shell header-inner">
 <a class="brand-logo" href="index.html" aria-label="เคียงใจ — หน้าแรก"><img src="assets/brand/logo-wordmark.png" alt="เคียงใจ" width="368" height="128"></a>
@@ -13,7 +13,7 @@
 <button class="button button-primary header-cta" type="button" data-download>ดาวน์โหลดแอป</button>
 
 </div></header>
-<main id="main">
+<main id="main" class="home-page">
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-scene" aria-hidden="true"><img src="assets/images/market-life.jpg" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
   <div class="shell hero-stage">
@@ -56,6 +56,7 @@
   </g>
 </svg>
 </span><div><h3>ชำระคืนสะดวก</h3><p>ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร ตามคำแนะนำในใบแจ้งยอดภายในแอป</p></div></article>
+    </div>
       <aside class="benefit-item safety-note"><span class="feature-icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
   <!-- Phosphor Icons: ph:shield-warning-duotone. MIT license: LICENSE-Phosphor.txt. -->
   <g fill="currentColor">
@@ -64,7 +65,6 @@
   </g>
 </svg>
 </span><div><h3>ข้อควรระวังเพื่อความปลอดภัย</h3><p>อย่าโอนเงินเข้าบัญชีบุคคล และอย่าเปิดเผยรหัสผ่านหรือรหัสยืนยันแก่ผู้อื่น</p><a href="security.html#reminders">ดูเพิ่มเติม</a></div></aside>
-    </div>
   </div>
 </div></section>
     <section class="application-steps section" id="kj-steps" aria-labelledby="steps-title"><div class="shell">
@@ -96,7 +96,7 @@
 </div></section>
 
 <section class="help-section section" id="kj-faq" aria-labelledby="faq-title"><div class="shell">
-  <div class="section-heading"><h2 id="faq-title">คำถามที่พบบ่อย</h2></div>
+  <div class="help-layout"><div class="section-heading"><h2 id="faq-title">คำถามที่พบบ่อย</h2><div class="faq-contact"><button class="button button-outline" type="button" data-contact>ติดต่อบริษัท</button></div></div>
   <div class="faq-panel"><div class="kj-faq-list">
         <article><button type="button" class="kj-question" aria-expanded="false" aria-controls="kj-f01" data-faq="F01"><span class="kjs-inline-wrap"><span lang="th">สมัครได้ในพื้นที่ใดบ้าง?</span></span><span aria-hidden="true">＋</span></button><div class="kj-answer" id="kj-f01" hidden=""><p><span lang="th">ปัจจุบันให้บริการเฉพาะผู้ที่มีคุณสมบัติตามเกณฑ์ในพื้นที่กรุงเทพมหานคร คุณสมบัติการสมัครเป็นไปตามรายละเอียดในแอปพลิเคชันและผลการพิจารณา</span></p></div></article>
         <article><button type="button" class="kj-question" aria-expanded="false" aria-controls="kj-f02" data-faq="F02"><span class="kjs-inline-wrap"><span lang="th">ชำระคืนอย่างไร?</span></span><span aria-hidden="true">＋</span></button><div class="kj-answer" id="kj-f02" hidden=""><p><span lang="th">ชำระคืนได้โดยสแกน QR Code ผ่านแอปพลิเคชันธนาคาร โปรดชำระตามยอดและคำแนะนำที่แสดงในใบแจ้งยอดภายในแอปพลิเคชัน</span></p></div></article>
@@ -105,7 +105,10 @@
         <article><button type="button" class="kj-question" aria-expanded="false" aria-controls="kj-f05" data-faq="F05"><span class="kjs-inline-wrap"><span lang="th">ติดต่อบริษัทได้อย่างไร?</span></span><span aria-hidden="true">＋</span></button><div class="kj-answer" id="kj-f05" hidden=""><p><span lang="th">ติดต่อบริษัทได้ตามหมายเลขโทรศัพท์ที่แสดงบนหน้านี้</span><button class="kj-link" type="button" data-contact="faq"><span class="kjs-inline-wrap"><span lang="th">ติดต่อบริษัท </span></span></button></p></div></article>
         <article><button type="button" class="kj-question" aria-expanded="false" aria-controls="kj-f06" data-faq="F06"><span class="kjs-inline-wrap"><span lang="th">ตรวจสอบช่องทางทางการได้อย่างไร? </span></span><span aria-hidden="true">＋</span></button><div class="kj-answer" id="kj-f06" hidden=""><p><span lang="th">โปรดเชื่อถือเฉพาะเว็บไซต์และเคียงใจแอปพลิเคชันอย่างเป็นทางการ รวมถึงช่องทางต่าง ๆ ที่ระบุไว้อย่างชัดเจนผ่านช่องทางอย่างเป็นทางการเท่านั้น</span></p><a class="kj-link" href="security.html#channels"><span class="kjs-inline-wrap"><span lang="th">ดูช่องทางทางการ</span></span></a><p><span lang="th">อย่าเชื่อถือเว็บไซต์ บัญชีสื่อสังคมออนไลน์ หมายเลขโทรศัพท์ บัญชีแอปส่งข้อความ หรืออีเมลที่ไม่ได้ระบุไว้</span></p><p><span lang="th">โปรดดาวน์โหลดแอปพลิเคชันเคียงใจผ่านลิงก์หรือ QR Code ที่เว็บไซต์ทางการนี้จัดให้เท่านั้น ก่อนติดตั้ง โปรดตรวจสอบชื่อแอปพลิเคชัน ตัวตนของผู้พัฒนา และข้อมูลที่แสดงในสโตร์ อย่าดาวน์โหลดหรือติดตั้งแอปพลิเคชันหรือไฟล์ที่ส่งมาทาง SMS อีเมล สื่อสังคมออนไลน์ หรือแอปพลิเคชันส่งข้อความ รวมถึงแอปพลิเคชันหรือไฟล์จาก QR Code ที่ไม่ทราบแหล่งที่มา</span></p></div></article>
         <article><button type="button" class="kj-question" aria-expanded="false" aria-controls="kj-f07" data-faq="F07"><span class="kjs-inline-wrap"><span lang="th">หากสงสัยว่ากำลังถูกหลอก ควรทำอย่างไร? </span></span><span aria-hidden="true">＋</span></button><div class="kj-answer" id="kj-f07" hidden=""><p><span lang="th">ขั้นตอนที่ 1: หยุดดำเนินการทุกอย่างทันที ห้ามโอนเงินเพิ่มเติม ห้ามคลิกลิงก์ใด ๆ ห้ามเปิดเผยรหัสยืนยันแก่คู่สนทนา ห้ามตอบกลับ และห้ามให้ข้อมูลส่วนบุคคลหรือข้อมูลทางการเงินแก่บุคคลดังกล่าว</span></p><p><span lang="th">ขั้นตอนที่ 2: เก็บหลักฐาน บันทึกภาพหน้าจอลิงก์ที่น่าสงสัย บทสนทนา และหลักฐานการโอนเงิน อย่าลบข้อมูลเหล่านี้</span></p><p><span lang="th">ขั้นตอนที่ 3: โอนเงินไปแล้วหรือไม่? ติดต่อธนาคารที่ใช้โอนเงินทันทีเพื่อขอระงับธุรกรรม พร้อมติดต่อช่องทางช่วยเหลือของหน่วยงานทางการไทย</span></p><a class="kj-link" href="security.html#help"><span class="kjs-inline-wrap"><span lang="th">ดูวิธีแจ้งเบาะแสและขอความช่วยเหลือ</span></span></a></div></article>
-      </div><div class="faq-contact"><button class="button button-outline" type="button" data-contact>ติดต่อบริษัท</button></div></div>
+      </div></div></div>
+</div></section>
+
+<section class="download-section section"><div class="shell">
   <section class="download" aria-labelledby="download-section-title"><div class="download-identity"><img src="assets/brand/app-icon.png" alt="ไอคอนแอปเคียงใจ" width="240" height="240" loading="lazy"><div><h2 id="download-section-title">ดาวน์โหลดเคียงใจ แล้วเริ่มสมัคร</h2><p>สมัครออนไลน์ทุกขั้นตอน ชำระคืนได้โดยสแกน QR Code ผ่านแอปธนาคาร</p></div></div><button class="button button-dark" type="button" data-download>ดาวน์โหลดแอป</button><p class="download-note" id="kj-home-download-safety">โปรดดาวน์โหลดผ่านลิงก์ทางการของ Google Play หรือ App Store ที่ประกาศบนเว็บไซต์นี้ อย่าติดตั้งแอปจากลิงก์ที่ไม่รู้จัก</p></section>
 </div></section>
 

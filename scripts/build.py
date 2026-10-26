@@ -6,7 +6,7 @@ import json
 from html import escape
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION=hashlib.sha256(b''.join((ROOT/name).read_bytes() for name in ('assets/base.css','assets/redesign.css','assets/app.js'))).hexdigest()[:12]
+VERSION=hashlib.sha256(b''.join((ROOT/name).read_bytes() for name in ('assets/base.css','assets/redesign.css','assets/homepage.css','assets/secondary.css','assets/app.js'))).hexdigest()[:12]
 COPY=json.loads((ROOT/'src/content/reviewed-th.json').read_text())['copy']
 def render(text):
     text=re.sub(r'\{\{copy:([\w-]+)\}\}',lambda m:escape(COPY[m[1]]),text)
@@ -27,7 +27,7 @@ for source,filename,title in [('home','index','หน้าแรก'),('securit
 <meta name="theme-color" content="#44E0F8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>{title} — เคียงใจ</title><link rel="icon" href="assets/brand/app-icon.png" type="image/png">
 <link rel="preload" href="assets/fonts/NotoSansThai-Variable.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/base.css?v={VERSION}"><link rel="stylesheet" href="assets/redesign.css?v={VERSION}"><script src="assets/app.js?v={VERSION}" defer></script></head>
+<link rel="stylesheet" href="assets/base.css?v={VERSION}"><link rel="stylesheet" href="assets/redesign.css?v={VERSION}"><link rel="stylesheet" href="assets/homepage.css?v={VERSION}"><link rel="stylesheet" href="assets/secondary.css?v={VERSION}"><script src="assets/app.js?v={VERSION}" defer></script></head>
 <body><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a><div id="kiangjai-v1">
 {header}
 {main}

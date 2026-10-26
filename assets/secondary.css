@@ -1,0 +1,631 @@
+/* Supporting pages and footer follow the same App palette and 1120px content axis. */
+.secondary-page {
+  --secondary-space:72px;
+  color:var(--text);
+  background:#fff;
+  text-align:left;
+}
+.secondary-page>.kj-section {
+  width:min(1120px,calc(100% - var(--gutter)*2));
+  margin-inline:auto;
+  padding-block:var(--secondary-space);
+  border:0;
+}
+.secondary-page h1 {
+  font-size:48px;
+  font-weight:750;
+  line-height:1.45;
+  letter-spacing:0;
+  text-align:left;
+}
+.secondary-page h2 {
+  font-size:36px;
+  font-weight:700;
+  line-height:1.5;
+  letter-spacing:0;
+  text-align:left;
+  margin-bottom:32px;
+}
+.secondary-page h3 {
+  font-size:22px;
+  line-height:1.55;
+  font-weight:650;
+  text-align:left;
+}
+.secondary-page p,.secondary-page li {
+  font-size:16px;
+  line-height:1.9;
+}
+.secondary-page>.kj-security-hero {
+  width:100%;
+  padding:64px max(var(--gutter),calc((100% - 1120px)/2)) 64px!important;
+  background:var(--surface);
+  border-bottom:1px solid var(--line);
+}
+.secondary-page .kj-security-hero>p:first-child {
+  max-width:none;
+  margin:0 0 32px;
+  font-size:14px;
+  color:var(--muted);
+}
+.secondary-page .kj-security-hero h1 {
+  margin-bottom:24px;
+}
+.secondary-page .kj-security-hero h2 {
+  font-size:26px;
+  line-height:1.6;
+  font-weight:600;
+  margin-bottom:12px;
+}
+.secondary-page .kj-security-hero>p:not(:first-child) {
+  max-width:760px;
+  color:var(--muted);
+}
+.secondary-page .kj-security-hero>.kj-link {
+  margin-top:20px;
+}
+.secondary-page .kj-security-channels {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#fff;
+  overflow:hidden;
+}
+.secondary-page .kj-security-channels article {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+  padding:32px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.secondary-page .kj-security-channels article:nth-child(odd) {
+  border-right:1px solid var(--line);
+}
+.secondary-page .kj-security-channels article:nth-child(n+3) {
+  border-top:1px solid var(--line);
+}
+.secondary-page .kj-security-channels h3 {
+  margin:0 0 16px;
+}
+.secondary-page .kj-security-channels p {
+  font-size:16px;
+  line-height:1.9;
+  margin:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  color:var(--muted);
+}
+.secondary-page .kj-security-channels p+p {
+  margin-top:10px;
+}
+.secondary-page .kj-security-channels .kj-sample-note {
+  font-size:14px;
+}
+.secondary-page .kj-security-channels button {
+  margin-top:20px;
+  font-size:16px;
+}
+.secondary-page .kj-security-channels .kj-primary {
+  min-height:52px;
+  padding:12px 24px;
+}
+.secondary-page #reminders {
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:56px;
+  border-top:1px solid var(--line);
+}
+.secondary-page .kj-safety-list {
+  margin:0;
+  padding-left:22px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.9;
+}
+.secondary-page .kj-safety-list li {
+  padding-left:6px;
+}
+.secondary-page .kj-safety-list li::marker {
+  color:var(--ink);
+}
+.secondary-page .kj-safety-list li+li {
+  margin-top:24px;
+}
+.secondary-page #scams,.secondary-page #security-faq {
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:0 56px;
+  border-top:1px solid var(--line);
+  align-items:start;
+}
+.secondary-page #scams>h2,.secondary-page #security-faq>h2 {
+  grid-column:1;
+  margin-bottom:16px;
+}
+.secondary-page #scams>p {
+  grid-column:1;
+  margin:0;
+  font-size:14px;
+}
+.secondary-page .kj-scam-list,.secondary-page #security-faq>.kj-faq-list {
+  grid-column:2;
+  grid-row:1/4;
+  width:100%;
+  margin:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+.secondary-page .kj-scam-list {
+  display:block;
+}
+.secondary-page .kj-scam-list details {
+  padding:0;
+  border:0;
+  border-bottom:1px solid var(--line);
+  border-radius:0;
+  background:transparent;
+}
+.secondary-page .kj-scam-list details:last-child {
+  border-bottom:0;
+}
+.secondary-page .kj-scam-list summary,.secondary-page .kj-help-guide summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-height:80px;
+  padding:20px 0;
+  list-style:none;
+  font-size:18px;
+  line-height:1.75;
+  font-weight:600;
+  color:var(--ink);
+  cursor:pointer;
+}
+.secondary-page summary::-webkit-details-marker {
+  display:none;
+}
+.secondary-page .kj-scam-list summary::after,.secondary-page .kj-help-guide summary::after {
+  content:"";
+  flex:0 0 10px;
+  width:10px;
+  height:10px;
+  margin-right:4px;
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translateY(-3px);
+  transition:transform .18s ease;
+}
+.secondary-page details[open]>summary::after {
+  transform:rotate(225deg) translate(-2px,-1px);
+}
+.secondary-page .kj-scam-list p {
+  font-size:16px;
+  line-height:1.95;
+  color:var(--muted);
+  margin:0 0 16px;
+}
+.secondary-page .kj-scam-list details p:last-child {
+  margin-bottom:28px;
+}
+.secondary-page .kj-scam-list strong {
+  color:var(--ink);
+  font-weight:600;
+}
+.secondary-page #help {
+  width:100%;
+  padding:var(--secondary-space) max(var(--gutter),calc((100% - 1120px)/2));
+  background:var(--cyan-soft);
+}
+.secondary-page #help>h2 {
+  margin-bottom:28px;
+}
+.secondary-page .kj-security-actions {
+  display:flex;
+  gap:16px;
+  margin:0 0 28px;
+}
+.secondary-page .kj-security-actions>.kj-primary {
+  min-height:56px;
+  padding:14px 28px;
+  font-size:16px;
+}
+.secondary-page .kj-report-channel {
+  padding:28px 32px;
+  margin:0 0 28px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:white;
+}
+.secondary-page .kj-report-channel h3 {
+  margin-bottom:16px;
+}
+.secondary-page .kj-report-channel .kj-sample-note {
+  font-size:14px;
+}
+.secondary-page .kj-help-guide {
+  margin:0 0 12px;
+  padding:0;
+  border-block:1px solid #bedae0;
+}
+.secondary-page .kj-help-guide ol {
+  padding-left:24px;
+  margin:0 0 28px;
+}
+.secondary-page .kj-help-guide li {
+  font-size:16px;
+  line-height:1.9;
+  color:var(--muted);
+  padding-left:6px;
+}
+.secondary-page .kj-help-guide li+li {
+  margin-top:12px;
+}
+.secondary-page #security-faq {
+  border:0;
+}
+.secondary-page #security-faq>.kj-faq-list article:last-child {
+  border-bottom:0;
+}
+.secondary-page .kj-question {
+  min-height:80px;
+  padding:20px 0;
+  gap:24px;
+  font-size:18px;
+  line-height:1.75;
+  font-weight:600;
+}
+.secondary-page .kj-question>span:last-child {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  padding:0;
+  color:var(--ink);
+  font-size:24px;
+}
+.secondary-page .kj-answer {
+  padding:0 0 28px;
+  font-size:16px;
+  line-height:1.95;
+}
+.secondary-page .kj-answer p {
+  font-size:16px;
+  line-height:1.95;
+}
+.secondary-page.kj-policy-view {
+  width:min(1120px,calc(100% - var(--gutter)*2));
+  min-height:520px;
+  margin-inline:auto;
+  padding:48px 0 80px;
+}
+.secondary-page .breadcrumb {
+  font-size:14px;
+  line-height:1.9;
+  margin:0 0 32px;
+  color:var(--muted);
+}
+.secondary-page .kj-policy-empty {
+  margin-top:40px;
+  padding:32px 0 0;
+  border:0;
+  border-top:1px solid var(--line);
+  border-radius:0;
+  background:transparent;
+}
+.secondary-page .kj-policy-empty p {
+  max-width:720px;
+  font-size:18px;
+  line-height:1.9;
+  margin:0;
+  color:var(--muted);
+}
+.secondary-page .kj-policy-empty .kj-primary {
+  margin-top:32px;
+}
+.kj-footer {
+  padding:64px max(var(--gutter),calc((100% - 1120px)/2)) 28px;
+  background:var(--surface);
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  text-align:left;
+}
+.kj-footer-grid {
+  display:grid;
+  grid-template-columns:220px minmax(0,1.3fr) minmax(0,1fr);
+  gap:48px;
+  align-items:start;
+}
+.kj-footer .kj-footer-brand-name {
+  width:176px;
+  max-width:100%;
+  margin:0 0 24px;
+}
+.kj-footer-brand-name img {
+  width:100%;
+  height:auto;
+}
+.kj-footer-grid h2 {
+  margin:0 0 20px;
+  font-size:18px;
+  line-height:1.7;
+  letter-spacing:0;
+  font-weight:650;
+  text-align:left;
+  color:var(--ink);
+}
+.kj-footer-grid p,.kj-footer-license p {
+  font-size:14px;
+  line-height:1.95;
+  margin:0;
+  overflow-wrap:anywhere;
+}
+.kj-footer-grid p+p {
+  margin-top:10px;
+}
+.kj-footer .kj-company-name {
+  font-size:16px;
+  font-weight:600;
+  color:var(--ink);
+}
+.kj-footer-brand>p:last-child {
+  max-width:190px;
+}
+.kj-footer-license {
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.kj-footer-license .kj-link {
+  font-size:14px;
+  line-height:1.8;
+  margin-top:12px;
+  padding:6px 0;
+}
+.kj-footer-company .kj-link {
+  font-size:14px;
+  min-height:44px;
+  margin-left:4px;
+}
+.kj-footer-bottom {
+  margin-top:40px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.kj-footer-bottom nav {
+  display:flex;
+  gap:8px 32px;
+  margin:0 0 16px;
+  align-items:center;
+}
+.kj-footer-bottom .kj-link {
+  font-size:14px;
+  line-height:1.8;
+  min-height:44px;
+  padding:6px 0;
+}
+.kj-footer-bottom>p {
+  max-width:920px;
+  margin:0;
+  font-size:14px;
+  line-height:1.95;
+}
+@media (max-width:1040px) {
+  .secondary-page #reminders,.secondary-page #scams,.secondary-page #security-faq {
+    grid-template-columns:240px minmax(0,1fr);
+    column-gap:40px;
+  }
+  .secondary-page h1 {
+    font-size:40px;
+  }
+  .secondary-page h2 {
+    font-size:32px;
+  }
+  .kj-footer-grid {
+    grid-template-columns:180px minmax(0,1fr) minmax(0,1fr);
+    gap:32px;
+  }
+  .kj-footer .kj-footer-brand-name {
+    width:156px;
+  }
+}
+@media (max-width:760px) {
+  .secondary-page {
+    --secondary-space:48px;
+  }
+  .secondary-page h1 {
+    font-size:34px;
+    line-height:1.5;
+  }
+  .secondary-page h2 {
+    font-size:28px;
+    line-height:1.55;
+    margin-bottom:24px;
+  }
+  .secondary-page h3 {
+    font-size:20px;
+  }
+  .secondary-page>.kj-security-hero {
+    padding:32px var(--gutter) 40px!important;
+  }
+  .secondary-page .kj-security-hero>p:first-child {
+    margin-bottom:24px;
+    font-size:12px;
+  }
+  .secondary-page .kj-security-hero h1 {
+    margin-bottom:20px;
+  }
+  .secondary-page .kj-security-hero h2 {
+    font-size:22px;
+    line-height:1.65;
+    margin-bottom:12px;
+  }
+  .secondary-page .kj-security-hero>.kj-link {
+    margin-top:16px;
+  }
+  .secondary-page .kj-security-channels {
+    grid-template-columns:1fr;
+    border-radius:24px;
+  }
+  .secondary-page .kj-security-channels article {
+    padding:24px;
+  }
+  .secondary-page .kj-security-channels article:nth-child(odd) {
+    border-right:0;
+  }
+  .secondary-page .kj-security-channels article+article {
+    border-top:1px solid var(--line);
+  }
+  .secondary-page .kj-security-channels h3 {
+    margin-bottom:12px;
+  }
+  .secondary-page .kj-security-channels .kj-primary {
+    width:100%;
+    padding-inline:16px;
+    font-size:14px;
+  }
+  .secondary-page #reminders,.secondary-page #scams,.secondary-page #security-faq {
+    display:block;
+  }
+  .secondary-page #reminders>h2 {
+    margin-bottom:24px;
+  }
+  .secondary-page #scams>p {
+    margin-bottom:24px;
+  }
+  .secondary-page #security-faq>h2 {
+    margin-bottom:24px;
+  }
+  .secondary-page .kj-safety-list {
+    padding-left:20px;
+  }
+  .secondary-page .kj-safety-list li {
+    padding-left:2px;
+  }
+  .secondary-page .kj-safety-list li+li {
+    margin-top:20px;
+  }
+  .secondary-page .kj-scam-list summary,.secondary-page .kj-help-guide summary,.secondary-page .kj-question {
+    min-height:76px;
+    padding-block:20px;
+    font-size:16px;
+    line-height:1.8;
+    gap:16px;
+  }
+  .secondary-page .kj-scam-list p,.secondary-page .kj-answer p {
+    font-size:16px;
+    line-height:1.95;
+  }
+  .secondary-page .kj-question>span:last-child {
+    width:24px;
+    height:28px;
+    font-size:24px;
+  }
+  .secondary-page #help {
+    padding-inline:var(--gutter);
+  }
+  .secondary-page .kj-security-actions {
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+    margin-bottom:24px;
+  }
+  .secondary-page .kj-security-actions>.kj-primary {
+    width:100%;
+    min-height:52px;
+    font-size:14px;
+    padding:12px 20px;
+  }
+  .secondary-page .kj-report-channel {
+    padding:24px;
+  }
+  .secondary-page .kj-help-guide ol {
+    padding-left:20px;
+  }
+  .secondary-page .kj-help-guide li {
+    padding-left:2px;
+  }
+  .secondary-page.kj-policy-view {
+    min-height:420px;
+    padding:32px 0 56px;
+  }
+  .secondary-page.kj-policy-view h1 {
+    font-size:30px;
+  }
+  .secondary-page .breadcrumb {
+    font-size:12px;
+    margin-bottom:28px;
+  }
+  .secondary-page .kj-policy-empty {
+    margin-top:28px;
+    padding-top:24px;
+  }
+  .secondary-page .kj-policy-empty p {
+    font-size:16px;
+  }
+  .secondary-page .kj-policy-empty .kj-primary {
+    margin-top:28px;
+  }
+  .kj-footer {
+    padding:40px var(--gutter) 24px;
+  }
+  .kj-footer-grid {
+    display:block;
+  }
+  .kj-footer .kj-footer-brand-name {
+    width:144px;
+    max-width:100%;
+    margin-bottom:16px;
+  }
+  .kj-footer-brand>p:last-child {
+    max-width:none;
+  }
+  .kj-footer-grid>div+div,.kj-footer-grid>.kj-footer-license {
+    margin-top:28px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .kj-footer-grid h2 {
+    font-size:18px;
+    margin-bottom:16px;
+  }
+  .kj-footer-grid p,.kj-footer-license p {
+    font-size:14px;
+    line-height:1.95;
+  }
+  .kj-footer-bottom {
+    margin-top:28px;
+    padding-top:20px;
+  }
+  .kj-footer-bottom nav {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px 16px;
+    align-items:start;
+    margin-bottom:20px;
+  }
+  .kj-footer-bottom .kj-link {
+    justify-self:start;
+    text-align:left;
+    font-size:13px;
+    min-height:44px;
+  }
+  .kj-footer-bottom>p {
+    font-size:12px;
+    line-height:1.95;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .secondary-page summary::after {
+    transition:none;
+  }
+}
